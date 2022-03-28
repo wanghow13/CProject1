@@ -51,12 +51,20 @@
 //}
 #include <stdio.h>
 #include <stdlib.h>
-enum color {
-	red=4,blue,grey,black,green
-}; 
-const int MAX = 3;
-const int MIN = 0;
-enum color dd;
+#define _CRT_SECURE_NO_WARNINGS
+#include <string.h>
+
+//enum color {
+//	red=4,blue,grey,black,green
+//}; 
+//const int MAX = 3;
+//const int MIN = 0;
+//enum color dd;
+//void sb(int* se)
+//{
+//    *se = time();
+//
+//}
 int main()
 {
     /*printf("请输入你喜欢的颜色");
@@ -102,27 +110,53 @@ int main()
     //printf("ptr 的地址是 %p\n", ptr);
 
     //return 0;
-    int i;
-
-    int ss[] = { 100,200,300 };
+   /* int i=10;
     int* p;
-    p = ss;
-    for (i = 0; i < MAX; i++)
+    int** p2;
+    p = &i;
+    p2 = &p;
+    printf("i的值为%d\n", i);
+    printf("*p为%d\n",* p);
+    printf("i的地址为%p\n", p);
+    printf("p的地址为%p\n", p2);
+    printf("i的值为%d", **p2);
+    */
+   
+   /*
+    int f = 7;
+    sb(&f);*/
+    /*int i;
+    int  j;
+    int x;
+    for (i = 0; i < 6; i++)
     {
-        printf("ss的地址%p\n", ss);
-        printf("ss的值%d\n", *p);
-        p++;
-    }
-    return 0;
+        
+		for (int j = 0; j <= 4 - i; j++)
+        {
+            printf(" ");
+        }
+        for (x = 1; x < i*2;x++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }return 0;*/
+
+   		//char ss[10]="woshijrydsb";
+   		//char se[10]="jrswoshidsb";
+   		//strcpy(ss,se);
+   		//printf("%d",ss) ;
 
 
 
+        FILE* fp = NULL;
 
-
-
-
-
-
+        fp = fopen("D:/tmp/test.txt", "w+");
+        fprintf(fp, "This is testing for fprintf...\n");
+        fputs("This is testing for fputs...\n", fp);
+        fclose(fp);
+    
+    
 
 
 
